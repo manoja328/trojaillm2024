@@ -1,0 +1,19 @@
+CUDA_VISIBLE_DEVICES=0 python entrypoint.py infer \
+--model_filepath=/workspace/manoj/trojai-llm2024_rev1/id-00000000 \
+--result_filepath=./output.txt \
+--scratch_dirpath=./scratch/ \
+--examples_dirpath=/workspace/manoj/trojai-llm2024_rev1/id-000000001/clean-example-data \
+--round_training_dataset_dirpath=/path/to/training/dataset/ \
+--metaparameters_filepath=./metaparameters.json \
+--schema_filepath=./metaparameters_schema.json \
+--learned_parameters_dirpath=./learned_parameters
+
+# CUDA_VISIBLE_DEVICES=2 python entrypoint.py infer \
+# --model_filepath=/workspace/manoj/trojai-llm2024_rev1/id-00000001 \
+# --result_filepath=./output.txt \
+# --scratch_dirpath=./scratch/ \
+# --examples_dirpath=/workspace/manoj/trojai-llm2024_rev1/id-00000001/poisoned-example-data \
+# --round_training_dataset_dirpath=/path/to/training/dataset/ \
+# --metaparameters_filepath=./metaparameters.json \
+# --schema_filepath=./metaparameters_schema.json \
+# --learned_parameters_dirpath=./learned_parameters
